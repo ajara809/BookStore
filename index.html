@@ -7,70 +7,239 @@
     <title>Book Store</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
     <style>
-        img{
+        img {
             height: 150px;
             width: 200px;
+        }
+
+        .card:hover {
+            transform: scale(1.03);
+            transition: 0.2s;
+        }
+
+        #logo {
+            height: 200px;
+            width: 300px;
+        }
+
+        button:hover {
+            transform: scale(1.03);
+            transition: 0.2s;
+        }
+
+        .trending {
+            height: 150px;
+            width: 100px;
+        }
+
+        input {
+            width: 400px;
+            height: 50px;
+        }
+
+        html {
+            scroll-behavior:smooth;
         }
     </style>
 </head>
 
 <body class="bg-primary text-white">
-    <div class="container-fluid bg-dark text-white">
-        <div class="row">
-            <div class="col mt-3">
-                <h3>Books</h3>
+    <nav>
+        <div class="container-fluid bg-dark text-white">
+            <div class="row">
+                <div class="col mt-3">
+                    <h3>Aj Books Store</h3>
+                </div>
+                <div class="col d-flex justify-content-lg-end justify-content-md-center justify-content-sm-start mt-4 ">
+                    <a href="#category" class="me-3 text-decoration-none text-white">Category</a>
+                    <a href="#testimonials" class="me-3 text-decoration-none text-white">Testimonials</a>
+                    <a href="#contact" class="me-3 text-decoration-none text-white">Contact</a>
+                </div>
             </div>
-            <d class="col d-flex justify-content-lg-end justify-content-md-center justify-content-sm-start mt-4 ">
-                <a href="Fiction.html" class="me-3 text-decoration-none text-white">Fiction</a>
-                <a href="biographic.html" class="me-3 text-decoration-none text-white">Biographic</a>
-                <a href="programming.html" class="me-3 text-decoration-none text-white">Programming</a>
-            </d>
         </div>
-    </div>
+    </nav>
     <br>
 
-    <div>
-        <h1 class="display-3">Welcome to Our Books Store</h1>
+    <div class="text-center">
+        <h1 class="display-3 fst-italic">Welcome to Our Books Store</h1>
         <p class="lead">Discover a world of knowledge, imagination, and inspiration.</p>
     </div>
     <br>
 
-    <div class="container-fluid">
-        <div class="row">
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">About Us</h2>
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <img src="./assets/logo.jpg" alt="About us image" class="img-fluid rounded" id="logo">
+            </div>
+            <div class="col-md-6">
+                <p class="lead">
+                    Welcome to our online book store your one stop destination for knowledge, inspiration, and
+                    imagination. We believe books are powerful tools that can change lives. Our curated collection
+                    includes everything from captivating fiction and inspiring biographies to the latest programming
+                    resources.
+                </p>
+                <p class="lead">
+                    Whether you're a passionate reader, a student, or a lifelong learner, we have something for you. We
+                    are committed to providing quality content, user-friendly browsing, and a smooth reading discovery
+                    experience.
+                </p>
+                <p class="lead"><strong>Happy reading!</strong></p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container-fluid" id="category">
+        <h2 class="text-center  mt-3"> Browse by Category</h2>
+        <div class="row mt-3">
             <div class="col-lg-4 col-md-6 col-sm-12 mt-2">
-                <div class="card">
+                <div class="card  h-100 bg-dark text-white ">
                     <div class="card-body">
                         <img src="./assets/fic.jpg" alt="">
-                        <h4 class="card-title mt-1">Fiction</h4>
+                        <h4 class="card-title mt-1"><i class="bi bi-book-half display-4 text-light"></i> Fiction</h4>
                         <p class="card-text">Escape reality with thrilling stories, deep characters, and magical
                             adventures.</p>
+                        <button class="btn bg-primary text-white"><a href="Fiction.html"
+                                class="text-decoration-none text-white">Link</a></button>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-12 mt-2">
-                <div class="card">
+                <div class="card  h-100 bg-dark text-white">
                     <div class="card-body">
                         <img src="./assets/biography.jpg" alt="">
-                        <h4 class="card-title mt-1">Biographic</h4>
-                        <p class="card-text">Get inspired by the life journeys of great minds and influential personalities.</p>
+                        <h4 class="card-title mt-1"><i class="bi bi-person-badge display-4 text-light"></i> Biographic
+                        </h4>
+
+                        <p class="card-text">Get inspired by the life journeys of great minds and influential
+                            personalities.</p>
+                        <button class="btn bg-primary text-white"><a href="biographic.html"
+                                class="text-decoration-none text-white">Link</a></button>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-12 mt-2">
-                <div class="card">
+                <div class="card  h-100 bg-dark text-white">
                     <div class="card-body">
                         <img src="./assets/pro.jpg" alt="">
-                        <h4 class="card-title mt-1">Programming</h4>
-                        <p class="card-text">Level up your skills with the latest coding books, tutorials, and tech guides.</p>
+                        <h4 class="card-title mt-1"><i class="bi bi-code-slash display-4 text-light"></i> Programming
+                        </h4>
+                        <p class="card-text">Level up your skills with the latest coding books, tutorials, and tech
+                            guides.</p>
+                        <button class="btn bg-primary text-white"><a href="programming.html"
+                                class="text-decoration-none text-white">Link</a></button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <p class="lead mt-3">We are passionate about books and aim to bring the best titles to readers of all ages and interests.
-          From thrilling fiction to inspiring biographies and technical programming books — we've got it all!</p>
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">Trending Books</h2>
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-12 mt-2">
+                <div class="card h-100 d-flex flex-column bg-dark text-white">
+                    <img src="./assets/kalam.jpg" class="trending ms-5 mt-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Wings of Fire</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-12 mt-2">
+                <div class="card h-100 d-flex flex-column bg-dark text-white">
+                    <img src="./assets/harry.jpg" class="trending ms-5 mt-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Harry Potter and the Philosopher’s Stone</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-12 mt-2">
+                <div class="card h-100 d-flex flex-column bg-dark text-white">
+                    <img src="./assets/python.jpg" class="trending ms-5 mt-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Python Crash Course</h5>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container mt-5" id="testimonials">
+        <h2 class="text-center mb-4">What Our Readers Say</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card p-3 h-100 bg-dark text-white">
+                    <p class="mb-2">“This store has an amazing collection of books. I finally found my favorite
+                        biography here!”</p>
+                    <h6 class="text-end">– Ananya, Chennai</h6>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card p-3  h-100 bg-dark text-white">
+                    <p class="mb-2">“I bought a programming book for my brother and he loved it. The descriptions were
+                        really helpful!”</p>
+                    <h6 class="text-end">– Rahul, Coimbatore</h6>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card p-3 h-100 bg-dark text-white">
+                    <p class="mb-2">“Easy to explore and such a variety! From fiction to coding – it’s perfect for
+                        readers like me.”</p>
+                    <h6 class="text-end">– Meera, Bengaluru</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">Why Choose Our Book Store?</h2>
+        <ul class="bg-dark text-white p-3 list-group-flush list-group rounded-3">
+            <li class="list-group-item text-white bg-primary"> A hand-picked collection of fiction, biographies, and
+                programming books for all readers.</li>
+            <li class="list-group-item"> Organized into categories to make browsing simple and enjoyable.</li>
+            <li class="list-group-item text-white bg-primary"> Clear labels like “Buy”, “Out of Stock”, and “Arrival”
+                help you know availability instantly.</li>
+            <li class="list-group-item"> Descriptions and summaries help you understand each book before choosing.</li>
+            <li class="list-group-item text-white bg-primary"> Responsive design our store looks great on mobile,
+                tablet, and desktop.</li>
+        </ul>
+    </div>
+
+    <div class="container mt-5 bg-dark text-white p-5 rounded-3">
+        <h2>Feedback</h2>
+        <p class="lead">We value your feedback! Please let us know how we can improve our
+            services.</p>
+        <input type="text" placeholder="Enter Your  Feedback here..."><br>
+        <button class="btn bg-primary text-white mt-3">Submit</button>
+    </div>
+
+    <footer class="bg-dark text-white text-center p-3 mt-5" id="contact">
+        <h2>Contact</h2>
+        <b>
+            <address>
+                Phone no:+91 7397177540 <br>
+                Email : ajjuice12@gmail.com <br>
+                Location : Porur, Chennai Tamilnadu <br>
+            </address>
+        </b>
+        <b>Follow us on social media for updates and offers!</b>
+        <b>
+            <address>
+                <a href="https://www.instagram.com/ajara809">Instagram</a> |
+                <a href="https://www.facebook.com/ajara809">Facebook</a> |
+                <a href="https://www.twitter.com/ajara809">Twitter</a>
+            </address>
+        </b>
+        <b>© 2025 Bookstore. All rights reserved.</b>
+    </footer>
+
 </body>
 
 </html>
